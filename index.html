@@ -1,72 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mar Kevin's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <main>
 
-      <header class="navbar">
-        <div class="container">
-          <div class="logo">MK</div>
-          <nav class="nav-menu">
-            <ul class="nav-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="menu-toggle" id="mobile-menu">☰</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mar Kevin's Portfolio</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">MK</div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Highlights</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+              <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+          <i class="fas fa-bars"></i>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <section id="home">
-        <h1 class="section-headings">I am <span class="my-name">Mar Kevin Alcantara.</span></h1>
-        <p class="intro">Aspiring <span class="my-role">full stack developer</span> dedicated to transforming ideas into dynamic and functional web applications</p>
-      </section>
+    <section id="home">
+      <h1 class="section-headings">I am <span class="my-name">Mar Kevin Alcantara.</span></h1>
+      <p class="intro">Aspiring <span class="my-role">full stack developer</span> dedicated to transforming ideas into
+        dynamic and functional web applications.</p>
+      <a href="#projects" class="cta-button">View Highlights</a>
+    </section>
 
-      <section id="about">
+    <section id="about">
+      <div class="about-content">
         <h2 class="section-headings">About Me</h2>
-        <div class="image-wrapper">
-           <img src="profile-pic.jpg" alt="profile-pic">
+        <p class="intro" style="margin-bottom: 1.5rem; text-align: left;">
+          I am a passionate developer with a keen eye for design and a drive for creating seamless user experiences. I
+          specialize in building responsive, accessible, and performant web applications using modern technologies.
+        </p>
+        <p style="opacity: 0.8;">
+          When I'm not coding, I'm exploring new tech trends, contributing to open source, or refining my design skills.
+        </p>
+      </div>
+      <div class="image-wrapper">
+        <img src="profile-pic.jpg" alt="Mar Kevin Alcantara">
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container" style="display: block;">
+        <h2 class="section-headings" style="text-align: center;">Project Highlights</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto; opacity: 0.8;">A selection of my recent work and
+          experiments.</p>
+
+        <div class="projects-grid">
+          <!-- Highlight Slot 1 -->
+          <div class="project-card">
+            <span class="project-tag">Featured</span>
+            <h3>Portfolio V2</h3>
+            <p>A modern, responsive portfolio website built with semantic HTML, CSS variables for theming, and vanilla
+              JavaScript for interactivity.</p>
+            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Highlight Slot 2 -->
+          <div class="project-card">
+            <span class="project-tag">Web App</span>
+            <h3>Task Manager</h3>
+            <p>A productivity application that helps users organize their daily tasks with drag-and-drop functionality
+              and local storage persistence.</p>
+            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Highlight Slot 3 -->
+          <div class="project-card">
+            <span class="project-tag">Design</span>
+            <h3>E-Commerce UI</h3>
+            <p>A conceptual user interface design for a modern fashion e-commerce platform, focusing on accessibility
+              and visual hierarchy.</p>
+            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="projects"> 
-        <h2 class="section-headings">Projects</h2>
-        <div class="project">
-           <h3>Soon</h3>
+    <section id="contact">
+      <h2 class="section-headings">Get In Touch</h2>
+      <p style="opacity: 0.8; margin-bottom: 2rem;">Have a project in mind or just want to say hi? I'd love to hear from
+        you.</p>
+      <form action="#" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
         </div>
-      </section>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
 
-      <section id="contact">
-        <h2 class="section-headings">Contacts</h2>
-        <form action="#" method="POST">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit">Send</button>
-        </form>
-      </section>
-       
-      <footer>
-          <p>© 2025 Mar Kevin Alcantara</p>
-      </footer>
+    <footer>
+      <p>© 2025 Mar Kevin Alcantara. Built with ❤️ and code.</p>
+    </footer>
 
-    </main>
-  </body>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>

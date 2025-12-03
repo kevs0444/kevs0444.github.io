@@ -51,13 +51,30 @@
     <section id="about">
       <div class="about-content">
         <h2 class="section-headings">About Me</h2>
-        <p class="intro" style="margin-bottom: 1.5rem; text-align: left;">
+        <p class="intro" style="margin-bottom: 1.5rem;">
           I am a passionate developer with a keen eye for design and a drive for creating seamless user experiences. I
           specialize in building responsive, accessible, and performant web applications using modern technologies.
         </p>
-        <p style="opacity: 0.8;">
+        <p style="opacity: 0.8; text-align: justify;">
           When I'm not coding, I'm exploring new tech trends, contributing to open source, or refining my design skills.
         </p>
+        <div class="social-links">
+          <a href="https://github.com/kevs0444" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/mar-kevin-alcantara-210a0a325/" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/KevinAlcantara04/" target="_blank" aria-label="Facebook"><i
+              class="fab fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@kevscode.tech?lang=en" target="_blank" aria-label="TikTok"><i
+              class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="resume-wrapper">
+          <a href="assets/resume.pdf" target="_blank" class="resume-btn preview-btn">
+            <i class="fas fa-eye"></i> Preview Resume
+          </a>
+          <a href="assets/resume.pdf" download="Mar_Kevin_Alcantara_Resume.pdf" class="resume-btn download-btn">
+            <i class="fas fa-file-download"></i> Download
+          </a>
+        </div>
       </div>
       <div class="image-wrapper">
         <img src="profile-pic.jpg" alt="Mar Kevin Alcantara">
@@ -71,31 +88,67 @@
           experiments.</p>
 
         <div class="projects-grid">
-          <!-- Highlight Slot 1 -->
+          <!-- Highlight Slot 1: FOVB-AIoT -->
           <div class="project-card">
-            <span class="project-tag">Desktop App</span>
-            <h3>Pharmacy Point of Sale System</h3>
-            <p>A modern, responsive portfolio website built with semantic HTML, CSS variables for theming, and vanilla
-              JavaScript for interactivity.</p>
-            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            <span class="project-tag">AI & IoT</span>
+            <img src="assets/images/projects/fovb-aiot.jpg" alt="FOVB-AIoT Project">
+            <div class="project-content">
+              <h3>FOVB-AIoT: Vital Sign Sensor</h3>
+              <div class="project-meta">
+                <span class="project-role">Project Leader • Full-Stack</span>
+                <span class="project-date">| Aug 2025 - Present</span>
+              </div>
+              <p>Led the development of a multifunction health-monitoring system (HR, BP, Temp, O2) with automated BMI
+                calculation. Integrated AI and IoT to provide real-time health data for the RTU Pasig Clinic.</p>
+              <div class="project-actions">
+                <a href="https://github.com/kevs0444/4in1-vital-sign" class="github-btn" target="_blank"
+                  aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.tiktok.com/@kevscode.tech/video/7578127015996427540?is_from_webapp=1&sender_device=pc&web_id=7497935491250816533"
+                  class="tiktok-btn" target="_blank" aria-label="Watch on TikTok"><i class="fab fa-tiktok"></i></a>
+              </div>
+            </div>
           </div>
 
-          <!-- Highlight Slot 2 -->
+          <!-- Highlight Slot 2: Smart Locker -->
           <div class="project-card">
-            <span class="project-tag">Web App</span>
-            <h3>locker-system-using-raspi</h3>
-            <p>A productivity application that helps users organize their daily tasks with drag-and-drop functionality
-              and local storage persistence.</p>
-            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            <span class="project-tag">IoT & Python</span>
+            <img src="assets/images/projects/smart-locker.jpg" alt="Smart Locker Project">
+            <div class="project-content">
+              <h3>Smart Locker System using Raspberry Pi</h3>
+              <div class="project-meta">
+                <span class="project-role">Project Leader • Full-Stack</span>
+                <span class="project-date">| Apr 2025 - May 2025</span>
+              </div>
+              <p>Developed a secure locker system powered by Raspberry Pi, featuring PIN-based access and a
+                user-friendly GUI. Highlighted skills in Python, hardware integration, and GUI development.</p>
+              <div class="project-actions">
+                <a href="https://github.com/kevs0444/locker-system-using-raspi" class="github-btn" target="_blank"
+                  aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.tiktok.com/@kevscode.tech/photo/7506823896822205703?is_from_webapp=1&sender_device=pc&web_id=7497935491250816533"
+                  class="tiktok-btn" target="_blank" aria-label="Watch on TikTok"><i class="fab fa-tiktok"></i></a>
+              </div>
+            </div>
           </div>
 
-          <!-- Highlight Slot 3 -->
+          <!-- Highlight Slot 3: CureSecure -->
           <div class="project-card">
-            <span class="project-tag">Web App + IoT + AI</span>
-            <h3>Four-in-One Vital Sign Sensor with BMI Calculation using AI and IoT for Health Risk Prediction</h3>
-            <p>A conceptual user interface design for a modern fashion e-commerce platform, focusing on accessibility
-              and visual hierarchy.</p>
-            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+            <span class="project-tag">C# WinForms</span>
+            <img src="assets/images/projects/curesecure.jpg" alt="CureSecure Project">
+            <div class="project-content">
+              <h3>CureSecure: Pharmacy POS</h3>
+              <div class="project-meta">
+                <span class="project-role">Full-Stack Developer</span>
+                <span class="project-date">| Jan 2024 - Apr 2024</span>
+              </div>
+              <p>Built a desktop-based pharmacy management system with POS, inventory tracking, and role-based access
+                (Admin, Manager, Staff) using C#, WinForms, and MySQL.</p>
+              <div class="project-actions">
+                <a href="https://github.com/kevs0444/CureSecure-Desktop-Application" class="github-btn" target="_blank"
+                  aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.tiktok.com/@kevscode.tech/video/7361793785661033745?is_from_webapp=1&sender_device=pc&web_id=7497935491250816533"
+                  class="tiktok-btn" target="_blank" aria-label="Watch on TikTok"><i class="fab fa-tiktok"></i></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -9,15 +9,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&family=Playfair+Display:wght@600;700&display=swap"
     rel="stylesheet">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <main>
+
+    <div class="social-sidebar">
+      <a href="https://www.linkedin.com/in/mar-kevin-alcantara-210a0a325/" target="_blank" aria-label="LinkedIn"><i
+          class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/KevinAlcantara04/" target="_blank" aria-label="Facebook"><i
+          class="fab fa-facebook"></i></a>
+      <a href="https://github.com/kevs0444" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.tiktok.com/@kevscode.tech?lang=en" target="_blank" aria-label="TikTok"><i
+          class="fab fa-tiktok"></i></a>
+    </div>
 
     <header class="navbar">
       <div class="container">
@@ -28,6 +39,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Highlights</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:markevinalcantara40@gmail.com">Email</a></li>
             <li>
               <button id="theme-toggle" aria-label="Toggle Dark Mode">
                 <i class="fas fa-moon"></i>
@@ -42,31 +54,30 @@
     </header>
 
     <section id="home">
-      <h1 class="section-headings">I am <span class="my-name">Mar Kevin Alcantara.</span></h1>
+      <h1 class="section-headings">I am <a href="#about" class="name-link"><span class="my-name">Mar Kevin
+            Alcantara.</span></a></h1>
       <p class="intro">Aspiring <span class="my-role">full stack developer</span> dedicated to transforming ideas into
         dynamic and functional web applications.</p>
-      <a href="#projects" class="cta-button">View Highlights</a>
+      <a href="#projects" class="cta-button">View Projects</a>
     </section>
 
     <section id="about">
       <div class="about-content">
         <h2 class="section-headings">About Me</h2>
         <p class="intro" style="margin-bottom: 1.5rem;">
-          I am a passionate developer with a keen eye for design and a drive for creating seamless user experiences. I
-          specialize in building responsive, accessible, and performant web applications using modern technologies.
+          I am a <strong>Computer Engineering student</strong> and aspiring <strong>Web Developer</strong> driven by a
+          passion for bridging the
+          gap between hardware and software. I specialize in building intelligent web applications that leverage
+          <strong>AI
+            and IoT</strong> to solve real-world problems.
         </p>
         <p style="opacity: 0.8; text-align: justify;">
-          When I'm not coding, I'm exploring new tech trends, contributing to open source, or refining my design skills.
+          With strong expertise in <strong>microcontrollers</strong> (Arduino, Raspberry Pi) and a proven
+          <strong>leadership mindset</strong>, I
+          thrive in challenging environments where I can lead projects to success. I am eager to bring my unique blend
+          of full-stack development skills and hardware knowledge to a forward-thinking team.
         </p>
-        <div class="social-links">
-          <a href="https://github.com/kevs0444" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/mar-kevin-alcantara-210a0a325/" target="_blank" aria-label="LinkedIn"><i
-              class="fab fa-linkedin"></i></a>
-          <a href="https://www.facebook.com/KevinAlcantara04/" target="_blank" aria-label="Facebook"><i
-              class="fab fa-facebook"></i></a>
-          <a href="https://www.tiktok.com/@kevscode.tech?lang=en" target="_blank" aria-label="TikTok"><i
-              class="fab fa-tiktok"></i></a>
-        </div>
+        <!-- Social Links Moved to Sidebar -->
         <div class="resume-wrapper">
           <a href="assets/resume.pdf" target="_blank" class="resume-btn preview-btn">
             <i class="fas fa-eye"></i> Preview Resume
@@ -77,81 +88,142 @@
         </div>
       </div>
       <div class="image-wrapper">
-        <img src="profile-pic.jpg" alt="Mar Kevin Alcantara">
+        <img id="profile-pic" src="assets/images/light-mode-profile-pic.jpg" alt="Mar Kevin Alcantara">
       </div>
     </section>
 
     <section id="projects">
-      <div class="container" style="display: block;">
-        <h2 class="section-headings" style="text-align: center;">Project Highlights</h2>
-        <p style="text-align: center; max-width: 600px; margin: 0 auto; opacity: 0.8;">A selection of my recent work and
-          experiments.</p>
+      <h2 class="section-headings">Portfolio Showcase</h2>
 
+      <!-- Tabs -->
+      <div class="tabs-container">
+        <button class="tab-btn active" data-tab="projects-content">
+          <i class="fas fa-code"></i> Projects
+        </button>
+        <button class="tab-btn" data-tab="tech-stack-content">
+          <i class="fas fa-layer-group"></i> Tech Stack
+        </button>
+      </div>
+
+      <!-- Projects Content -->
+      <div id="projects-content" class="tab-content active">
         <div class="projects-grid">
-          <!-- Highlight Slot 1: FOVB-AIoT -->
-          <div class="project-card">
+          <!-- Project 1 -->
+          <div class="project-card" data-tiktok-id="7578127015996427540">
             <span class="project-tag">AI & IoT</span>
             <img src="assets/images/projects/fovb-aiot.jpg" alt="FOVB-AIoT Project">
             <div class="project-content">
-              <h3>FOVB-AIoT: Vital Sign Sensor</h3>
+              <h3>FOVB-AIoT</h3>
               <div class="project-meta">
-                <span class="project-role">Project Leader • Full-Stack</span>
-                <span class="project-date">| Aug 2025 - Present</span>
+                <span class="project-role">Lead Developer</span>
+                <span class="project-date">2024</span>
               </div>
               <p>Led the development of a multifunction health-monitoring system (HR, BP, Temp, O2) with automated BMI
                 calculation. Integrated AI and IoT to provide real-time health data for the RTU Pasig Clinic.</p>
               <div class="project-actions">
+                <button class="view-details-btn">View Details</button>
                 <a href="https://github.com/kevs0444/4in1-vital-sign" class="github-btn" target="_blank"
                   aria-label="View on GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.tiktok.com/@kevscode.tech/video/7578127015996427540?is_from_webapp=1&sender_device=pc&web_id=7497935491250816533"
-                  class="tiktok-btn" target="_blank" aria-label="Watch on TikTok"><i class="fab fa-tiktok"></i></a>
               </div>
             </div>
           </div>
 
-          <!-- Highlight Slot 2: Smart Locker -->
-          <div class="project-card">
+          <!-- Project 2 -->
+          <div class="project-card" data-tiktok-id="7506823896822205703">
             <span class="project-tag">IoT & Python</span>
             <img src="assets/images/projects/smart-locker.jpg" alt="Smart Locker Project">
             <div class="project-content">
-              <h3>Smart Locker System using Raspberry Pi</h3>
+              <h3>Smart Locker System</h3>
               <div class="project-meta">
-                <span class="project-role">Project Leader • Full-Stack</span>
-                <span class="project-date">| Apr 2025 - May 2025</span>
+                <span class="project-role">Hardware Lead</span>
+                <span class="project-date">2023</span>
               </div>
               <p>Developed a secure locker system powered by Raspberry Pi, featuring PIN-based access and a
                 user-friendly GUI. Highlighted skills in Python, hardware integration, and GUI development.</p>
               <div class="project-actions">
+                <button class="view-details-btn">View Details</button>
                 <a href="https://github.com/kevs0444/locker-system-using-raspi" class="github-btn" target="_blank"
                   aria-label="View on GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.tiktok.com/@kevscode.tech/photo/7506823896822205703?is_from_webapp=1&sender_device=pc&web_id=7497935491250816533"
-                  class="tiktok-btn" target="_blank" aria-label="Watch on TikTok"><i class="fab fa-tiktok"></i></a>
               </div>
             </div>
           </div>
 
-          <!-- Highlight Slot 3: CureSecure -->
-          <div class="project-card">
-            <span class="project-tag">C# WinForms</span>
+          <!-- Project 3 -->
+          <div class="project-card" data-tiktok-id="7361793785661033745">
+            <span class="project-tag">C# & WinForms</span>
             <img src="assets/images/projects/curesecure.jpg" alt="CureSecure Project">
             <div class="project-content">
-              <h3>CureSecure: Pharmacy POS</h3>
+              <h3>CureSecure</h3>
               <div class="project-meta">
-                <span class="project-role">Full-Stack Developer</span>
-                <span class="project-date">| Jan 2024 - Apr 2024</span>
+                <span class="project-role">Full Stack Dev</span>
+                <span class="project-date">2023</span>
               </div>
               <p>Built a desktop-based pharmacy management system with POS, inventory tracking, and role-based access
                 (Admin, Manager, Staff) using C#, WinForms, and MySQL.</p>
               <div class="project-actions">
+                <button class="view-details-btn">View Details</button>
                 <a href="https://github.com/kevs0444/CureSecure-Desktop-Application" class="github-btn" target="_blank"
                   aria-label="View on GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.tiktok.com/@kevscode.tech/video/7361793785661033745?is_from_webapp=1&sender_device=pc&web_id=7497935491250816533"
-                  class="tiktok-btn" target="_blank" aria-label="Watch on TikTok"><i class="fab fa-tiktok"></i></a>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Tech Stack Content -->
+      <div id="tech-stack-content" class="tab-content">
+
+        <div class="tech-category">
+          <h3 class="tech-category-title">Frontend Development</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+            <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+            <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+            <div class="tech-item"><i class="devicon-react-original colored"></i><span>React.js</span></div>
+            <div class="tech-item"><i class="devicon-tailwindcss-original colored"></i><span>Tailwind</span></div>
+            <div class="tech-item"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+          </div>
+        </div>
+
+        <div class="tech-category">
+          <h3 class="tech-category-title">Backend Development</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+            <div class="tech-item"><i class="devicon-flask-original colored"></i><span>Flask</span></div>
+            <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+            <div class="tech-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+            <div class="tech-item"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
+          </div>
+        </div>
+
+        <div class="tech-category">
+          <h3 class="tech-category-title">Database</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+            <div class="tech-item"><i class="fas fa-database" style="color: #00758F;"></i><span>SQL</span></div>
+          </div>
+        </div>
+
+        <div class="tech-category">
+          <h3 class="tech-category-title">AI & Machine Learning</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+            <div class="tech-item"><i class="fas fa-eye" style="color: #FF6B6B;"></i><span>YOLO</span></div>
+          </div>
+        </div>
+
+        <div class="tech-category">
+          <h3 class="tech-category-title">Prototyping & Tools</h3>
+          <div class="tech-grid">
+            <div class="tech-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="tech-item"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+            <div class="tech-item"><i class="devicon-arduino-plain colored"></i><span>Arduino</span></div>
+            <div class="tech-item"><i class="devicon-raspberrypi-plain colored"></i><span>Raspberry Pi</span></div>
+          </div>
+        </div>
+
+      </div>
+
     </section>
 
     <section id="contact">
@@ -178,6 +250,30 @@
     <footer>
       <p>© 2025 Mar Kevin Alcantara. Built with ❤️ and code.</p>
     </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+          <div class="modal-image-container">
+            <img id="modal-image" src="" alt="Project Image">
+          </div>
+          <div class="modal-info">
+            <h2 id="modal-title">Project Title</h2>
+            <div class="modal-meta">
+              <span id="modal-role">Role</span>
+              <span id="modal-date">Date</span>
+            </div>
+            <p id="modal-description">Description goes here...</p>
+            <div id="modal-tiktok-container" class="tiktok-embed-container" style="margin-bottom: 1.5rem;"></div>
+            <div class="modal-actions">
+              <a href="#" id="modal-github" class="github-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
   <script src="script.js"></script>

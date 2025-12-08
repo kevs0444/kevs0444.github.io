@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateThemeIcon(theme) {
         const icon = themeToggle.querySelector('i');
-        const profilePic = document.getElementById('profile-pic');
+        const profilePic = document.getElementById('hero-profile-img');
 
         if (theme === 'dark-mode') {
             icon.classList.remove('fa-moon');
@@ -42,6 +42,16 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         mobileMenuBtn.classList.toggle('active');
+    });
+
+    // Navbar Scroll Effect
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
     });
 
     // Scroll Animations
@@ -176,5 +186,75 @@ document.addEventListener('DOMContentLoaded', () => {
 
             window.location.href = `mailto:markevinalcantara40@gmail.com?subject=${subject}&body=${body}`;
         });
+    }
+
+    // Custom Cursor Logic
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorOutline = document.querySelector('.cursor-outline');
+
+    if (cursorDot && cursorOutline) {
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            // Dot follows instantly
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            // Outline follows with slight delay
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 150, fill: "forwards" });
+        });
+
+        // Add hover effect for interactive elements
+        const interactiveElements = document.querySelectorAll('a, button, .project-card, .tech-item, input, textarea, .logo');
+
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                document.body.classList.add('hovering');
+            });
+            el.addEventListener('mouseleave', () => {
+                document.body.classList.remove('hovering');
+            });
+        });
+    }
+
+    // Parallax Effect for Hero Section
+    const heroSection = document.querySelector('.dev-hero');
+    const blob = document.querySelector('.profile-blob');
+    const floatingCards = document.querySelectorAll('.floating-card');
+
+    if (heroSection && blob) {
+        heroSection.addEventListener('mousemove', (e) => {
+            const x = (window.innerWidth - e.pageX * 2) / 100;
+            const y = (window.innerHeight - e.pageY * 2) / 100;
+
+            // Move Blob
+            blob.style.transform = `translate(${x * 2}px, ${y * 2}px)`;
+
+            // Move Cards with different speeds for depth
+            floatingCards.forEach((card, index) => {
+                const speed = (index + 1) * 2;
+                card.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+    }
+
+    // Hide Sidebar on Home Section
+    const sidebar = document.querySelector('.social-sidebar');
+    if (heroSection && sidebar) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sidebar.classList.add('hidden');
+                } else {
+                    sidebar.classList.remove('hidden');
+                }
+            });
+        }, { threshold: 0.1 }); // Trigger when 10% of hero is visible
+
+        observer.observe(heroSection);
     }
 });

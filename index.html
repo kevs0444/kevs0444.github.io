@@ -53,43 +53,60 @@
       </div>
     </header>
 
-    <section id="home">
-      <h1 class="section-headings">I am <a href="#about" class="name-link"><span class="my-name">Mar Kevin
-            Alcantara.</span></a></h1>
-      <p class="intro">Aspiring <span class="my-role">full stack developer</span> dedicated to transforming ideas into
-        dynamic and functional web applications.</p>
-      <a href="#projects" class="cta-button">View Projects</a>
+    <section id="home" class="dev-hero">
+      <div class="hero-content">
+        <!-- Left Text -->
+        <div class="hero-text">
+          <span class="hero-label">Software Engineer</span>
+          <h1 class="hero-title">Hello I'm <br> <span class="highlight">Mar Kevin</span> <br> Alcantara</h1>
+          <p class="hero-subtitle">Web Developer & Full-Stack Engineer | Building modern, responsive, and user-centric
+            web applications.</p>
+
+          <div class="hero-cta">
+            <a href="assets/resume.pdf" download="Mar_Kevin_Alcantara_Resume.pdf" class="btn-outline">
+              Download Resume <i class="fas fa-download"></i>
+            </a>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/mar-kevin-alcantara-83562326a/" target="_blank"
+                class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/Kevs0444" target="_blank" class="social-icon"><i
+                  class="fab fa-github"></i></a>
+              <a href="https://www.facebook.com/KevinAlcantara04/" target="_blank" class="social-icon"><i
+                  class="fab fa-facebook-f"></i></a>
+              <a href="https://www.tiktok.com/@kevscode.tech?lang=en" target="_blank" class="social-icon"><i
+                  class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="hero-image-container">
+          <div class="profile-ring">
+            <img src="assets/images/light-mode-profile-pic.jpg" alt="Mar Kevin Alcantara" class="profile-img"
+              id="hero-profile-img">
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="about">
       <div class="about-content">
         <h2 class="section-headings">About Me</h2>
-        <p class="intro" style="margin-bottom: 1.5rem;">
+        <p>
           I am a <strong>Computer Engineering student</strong> and aspiring <strong>Web Developer</strong> driven by a
           passion for bridging the
           gap between hardware and software. I specialize in building intelligent web applications that leverage
           <strong>AI
             and IoT</strong> to solve real-world problems.
         </p>
-        <p style="opacity: 0.8; text-align: justify;">
+        <p>
           With strong expertise in <strong>microcontrollers</strong> (Arduino, Raspberry Pi) and a proven
           <strong>leadership mindset</strong>, I
           thrive in challenging environments where I can lead projects to success. I am eager to bring my unique blend
           of full-stack development skills and hardware knowledge to a forward-thinking team.
         </p>
-        <!-- Social Links Moved to Sidebar -->
-        <div class="resume-wrapper">
-          <a href="assets/resume.pdf" target="_blank" class="resume-btn preview-btn">
-            <i class="fas fa-eye"></i> Preview Resume
-          </a>
-          <a href="assets/resume.pdf" download="Mar_Kevin_Alcantara_Resume.pdf" class="resume-btn download-btn">
-            <i class="fas fa-file-download"></i> Download
-          </a>
-        </div>
       </div>
-      <div class="image-wrapper">
-        <img id="profile-pic" src="assets/images/light-mode-profile-pic.jpg" alt="Mar Kevin Alcantara">
-      </div>
+      <!-- Image removed to avoid redundancy -->
     </section>
 
     <section id="projects">
@@ -276,6 +293,8 @@
     </div>
 
   </main>
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
   <script src="script.js"></script>
 </body>
 

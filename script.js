@@ -128,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.remove('show');
         setTimeout(() => {
             modal.style.display = 'none';
+            document.getElementById('modal-tiktok-container').innerHTML = ''; // Stop video
         }, 300);
     });
 
@@ -136,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.remove('show');
             setTimeout(() => {
                 modal.style.display = 'none';
+                document.getElementById('modal-tiktok-container').innerHTML = ''; // Stop video
             }, 300);
         }
     });

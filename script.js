@@ -172,21 +172,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Contact Form Handler
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-
-            window.location.href = `mailto:markevinalcantara40@gmail.com?subject=${subject}&body=${body}`;
-        });
-    }
+    // Contact Form Handler - Handled by Formspree in HTML
+    // const contactForm = document.querySelector('.contact-form');
+    // if (contactForm) {
+    //     ...
+    // }
 
     // Custom Cursor Logic
     const cursorDot = document.querySelector('.cursor-dot');

@@ -796,6 +796,33 @@ body.dark-mode .project-card:hover {
   /* Justify text */
 }
 
+.project-tech-stack {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+  align-items: center;
+  padding-left: 2px;
+  /* Visual alignment */
+}
+
+.project-tech-stack i {
+  font-size: 1.4rem;
+  /* Removed fixed color to allow 'colored' class to work */
+  transition: var(--transition);
+  cursor: help;
+  filter: grayscale(100%);
+  /* Start generic/gray */
+  opacity: 0.7;
+}
+
+.project-tech-stack i:hover {
+  filter: grayscale(0%);
+  /* Color on hover */
+  opacity: 1;
+  transform: translateY(-3px) scale(1.1);
+}
+
+
 .project-actions {
   display: flex;
   align-items: center;

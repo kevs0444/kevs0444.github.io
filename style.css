@@ -61,10 +61,6 @@ body {
   overflow-x: hidden;
 }
 
-body.no-scroll {
-  overflow: hidden;
-}
-
 /* Typography Updates for Formal Look */
 h1,
 h2,
@@ -495,7 +491,6 @@ h3,
   margin-bottom: 3rem;
   border-bottom: 1px solid var(--border);
   padding-bottom: 1rem;
-  flex-wrap: wrap;
 }
 
 .tab-btn {
@@ -812,27 +807,25 @@ body.dark-mode .project-card:hover {
 
 .project-tech-stack i {
   font-size: 1.4rem;
-  /* Removed fixed color to allow 'colored' class to work */
   transition: var(--transition);
   cursor: help;
-  filter: grayscale(100%);
-  /* Start generic/gray */
-  opacity: 0.7;
+  opacity: 0.95;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.25));
 }
 
 .project-tech-stack i:hover {
-  filter: grayscale(0%);
-  /* Color on hover */
   opacity: 1;
   transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.35));
 }
 
-/* Improve tech stack icon visibility in dark mode */
 body.dark-mode .project-tech-stack i {
-  filter: grayscale(0%);
-  opacity: 0.95;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.7));
 }
 
+body.dark-mode .project-tech-stack i:hover {
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.85));
+}
 
 .project-actions {
   display: flex;
@@ -1350,6 +1343,15 @@ body.dark-mode .social-links a:hover {
   opacity: 0.3;
 }
 
+/* Ensure tech stack is hidden when tab is inactive */
+#tech-stack-content {
+  display: none;
+}
+
+#tech-stack-content.active {
+  display: block;
+}
+
 /* Responsive Modal */
 @media (max-width: 768px) {
   .modal-body {
@@ -1395,8 +1397,8 @@ body.dark-mode .social-links a:hover {
 /* Animations */
 .hidden-animate {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s cubic-bezier(0.2, 1, 0.3, 1);
+  transform: translateY(30px);
+  transition: all 0.65s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .animate-in {
@@ -1417,8 +1419,6 @@ body.dark-mode .social-links a:hover {
     clip-path: inset(0 0 100% 0);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     border-bottom: var(--border);
-    gap: 1.25rem;
-    align-items: flex-start;
   }
 
   .nav-links.active {
@@ -1447,12 +1447,6 @@ body.dark-mode .social-links a:hover {
     padding-top: 80px;
   }
 
-  .hero-cta {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
   .image-wrapper img {
     box-shadow: 15px 15px 0px var(--primary-color);
   }
@@ -1464,59 +1458,6 @@ body.dark-mode .social-links a:hover {
 
   #modal-image {
     height: 200px;
-  }
-
-  .contact-form {
-    padding: 2.25rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .navbar {
-    padding: 1rem 1.5rem;
-  }
-
-  .hero-title {
-    font-size: 2.6rem;
-  }
-
-  .hero-subtitle {
-    font-size: 0.95rem;
-  }
-
-  .profile-ring {
-    width: 260px;
-    height: 260px;
-  }
-
-  .profile-img {
-    width: 210px;
-    height: 210px;
-  }
-
-  #about,
-  #projects,
-  #contact {
-    padding: 6rem 1.5rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .project-card img {
-    height: 200px;
-  }
-
-  .tab-btn {
-    flex: 1 1 140px;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .contact-form {
-    padding: 1.75rem;
   }
 }
 

@@ -90,8 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animatedElements.forEach((el, index) => {
         el.classList.add('hidden-animate');
-        // Staggered animation delay for a smooth cascading effect
-        el.style.transitionDelay = `${index * 0.08}s`;
+        // Faster, capped stagger to reduce perceived delay
+        const delay = Math.min(index * 0.04, 0.25);
+        el.style.transitionDelay = `${delay}s`;
         observer.observe(el);
     });
 

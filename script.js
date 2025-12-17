@@ -42,6 +42,16 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         mobileMenuBtn.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+    });
+
+    // Close mobile nav on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            body.classList.remove('no-scroll');
+        });
     });
 
     // Navbar Scroll Effect
@@ -54,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Scroll Animations
+    // Scroll Animations (smooth, with staggered reveal)
     const observerOptions = {
         threshold: 0.1
     };
@@ -68,8 +78,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    document.querySelectorAll('.section-headings, .intro, .project-card, .about-content, .contact-form').forEach(el => {
+    const animatedElements = document.querySelectorAll(`
+        .section-headings,
+        .hero-text,
+        .hero-image-container,
+        .project-card,
+        .about-content,
+        .contact-form,
+        .tech-item
+    `);
+
+    animatedElements.forEach((el, index) => {
         el.classList.add('hidden-animate');
+        // Staggered animation delay for a smooth cascading effect
+        el.style.transitionDelay = `${index * 0.08}s`;
         observer.observe(el);
     });
 

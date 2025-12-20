@@ -659,7 +659,7 @@ body.dark-mode .project-card:hover {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -1415,10 +1415,12 @@ body.dark-mode .social-links a:hover {
     width: 100%;
     background: var(--nav-bg);
     flex-direction: column;
-    padding: 3rem 2rem;
+    padding: 2rem;
     clip-path: inset(0 0 100% 0);
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     border-bottom: var(--border);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
@@ -1430,9 +1432,20 @@ body.dark-mode .social-links a:hover {
   }
 
   #about {
+    padding: 6rem 1.5rem;
     flex-direction: column;
     text-align: center;
     gap: 3rem;
+  }
+
+  .about-content {
+    align-items: center;
+  }
+
+  .about-content p {
+    text-align: center;
+    /* Center text on mobile for better flow */
+    font-size: 1rem;
   }
 
   .social-links {
@@ -1440,24 +1453,121 @@ body.dark-mode .social-links a:hover {
   }
 
   .section-headings {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+    /* Smaller heading on mobile */
   }
 
+  /* Hero Adjustments */
   #home {
-    padding-top: 80px;
+    padding-top: 100px;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    /* Reduced from 4rem */
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta {
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Allow buttons to stack if needed */
   }
 
   .image-wrapper img {
     box-shadow: 15px 15px 0px var(--primary-color);
   }
 
+  /* Modal Mobile */
   .modal-content {
     width: 95%;
     margin: 10px;
+    height: auto;
+    max-height: 85vh;
+  }
+
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-image-container {
+    height: 200px;
+    min-height: 200px;
+    width: 100%;
+    flex: none;
+  }
+
+  .modal-info {
+    padding: 1.5rem;
+    overflow-y: auto;
   }
 
   #modal-image {
-    height: 200px;
+    height: 100%;
+    /* Ensure it fills container */
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .profile-ring {
+    width: 280px;
+    height: 280px;
+  }
+
+  .profile-img {
+    width: 230px;
+    height: 230px;
+  }
+
+  .hero-label {
+    font-size: 0.9rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    /* Single column on very small screens */
+  }
+
+  .tech-grid {
+    gap: 1rem;
+  }
+
+  .tech-item {
+    width: 100px;
+    /* Smaller tech cards */
+    padding: 1rem;
+  }
+
+  .tech-item i {
+    font-size: 2.5rem;
+  }
+
+  .btn-outline {
+    width: 100%;
+    /* Full width buttons */
+    justify-content: center;
+  }
+
+  .social-icons {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
   }
 }
 

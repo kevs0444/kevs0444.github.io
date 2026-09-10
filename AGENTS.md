@@ -53,3 +53,7 @@
 - Note: A horizontal sticky scroll feature was proposed for the projects section but intentionally rejected. The standard vertical stack should be maintained.
 - Run `npm run build` after UI changes, then do a quick mobile pass for spacing and modal behavior.
 - Never commit real API keys (`.env*` is gitignored); rotate exposed keys immediately.
+
+## Environment Variables
+- Always keep .env.example in sync with the structure of .env. Whenever you add, modify, or remove an environment variable in .env, ensure you reflect that change (without the secret values) in .env.example.
+

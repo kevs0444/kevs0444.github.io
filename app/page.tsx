@@ -165,7 +165,7 @@ const careerBars: CareerBar[] = [
     organization: "Data, AIoT & Software Foundations",
     location: "Pasig City",
     pillarHeight: 38,
-    image: "/assets/images/kevin-graduation-portrait-web-nobg.png",
+    image: "/assets/images/kevin-graduation-portrait-web.jpg",
     imageLabel: "Kevin in graduation attire",
     metricBadge: "Engineering + Analytics Foundation",
     status: "completed",
@@ -182,7 +182,7 @@ const careerBars: CareerBar[] = [
         title: "FOVB-AIoT",
         role: "Lead AI & Data Developer",
         range: "Aug 2025 – Mar 2026",
-        image: "/assets/images/projects/fovb-aiot-nobg.png",
+        image: "/assets/images/projects/fovb-aiot.jpg",
         imageLabel: "Multi-AI Vital Sign Risk Scoring System",
         summary: "IoT vital-sign capture with XGBoost risk scoring and live monitoring dashboard.",
         impactMetric: "Multi-AI Model Pipeline",
@@ -192,7 +192,7 @@ const careerBars: CareerBar[] = [
         title: "Smart AI Kilo Bot",
         role: "IoT Data Dashboard Developer",
         range: "Nov 2025 – Dec 2025",
-        image: "/assets/images/projects/kilo-bot-nobg.png",
+        image: "/assets/images/projects/kilo-bot.png",
         imageLabel: "Realtime Weighing & Pricing Interface",
         summary: "Instant operational weighing feedback connected to low-latency Python pipeline.",
         impactMetric: "Sub-second Pipeline Latency",
@@ -202,7 +202,7 @@ const careerBars: CareerBar[] = [
         title: "Smart Locker System",
         role: "Project Manager & Automation Developer",
         range: "Apr 2025 – May 2025",
-        image: "/assets/images/projects/smart-locker-nobg.png",
+        image: "/assets/images/projects/smart-locker.jpg",
         imageLabel: "Smart Locker Prototype",
         summary: "Python & Raspberry Pi locker control with automated authentication.",
         impactMetric: "Hardware State Automation",
@@ -220,7 +220,7 @@ const careerBars: CareerBar[] = [
     organization: "Engineering Operations Analytics",
     location: "Ortigas Center, Pasig City",
     pillarHeight: 54,
-    image: "/assets/images/career/denso-analytics-nobg.png",
+    image: "/assets/images/career/denso-analytics.png",
     imageLabel: "Kevin at Denso Ten Solutions Philippines",
     metricBadge: "75%-80% Reporting Time Reduction",
     status: "completed",
@@ -243,7 +243,7 @@ const careerBars: CareerBar[] = [
     organization: "Commercial Forecasting & Data Warehousing",
     location: "BGC, Taguig City",
     pillarHeight: 68,
-    image: "/assets/images/career/phoenix-forecasting-nobg.png",
+    image: "/assets/images/career/phoenix-forecasting.png",
     imageLabel: "Kevin at Phoenix Petroleum Philippines",
     metricBadge: "83% Report Time Cut & XGBoost",
     status: "completed",
@@ -267,7 +267,7 @@ const careerBars: CareerBar[] = [
     organization: "Regional Brand E-Commerce Analytics",
     location: "BGC, Taguig City",
     pillarHeight: 82,
-    image: "/assets/images/career/luxasia-internship-nobg.png",
+    image: "/assets/images/career/luxasia-internship.jpg",
     imageLabel: "Kevin at LUXASIA & LEAP Commerce office",
     imagePosition: "center 30%",
     metricBadge: "Active Role: Commercial Data & BI",
@@ -285,7 +285,7 @@ const careerBars: CareerBar[] = [
         title: "Workstation & Regional Data Environment",
         role: "Data Analyst Intern",
         range: "Jul 2026 – Present",
-        image: "/assets/images/career/luxasia-commerce-nobg.png",
+        image: "/assets/images/career/luxasia-commerce.png",
         imageLabel: "LUXASIA ThinkPad workstation, employee badge, and regional brand operations setup",
         imagePosition: "center center",
         summary: "Daily analytics workstation driving automated extraction and BI reporting for Shopee and Lazada brand stores.",
@@ -304,7 +304,7 @@ const careerBars: CareerBar[] = [
     organization: "Future Employer",
     location: "Open to Opportunities",
     pillarHeight: 96,
-    image: "/assets/images/career/full-time-job-icon-3d-nobg.png",
+    image: "/assets/images/career/full-time-job-icon-3d.png",
     imageLabel: "3D briefcase and analytics job icon",
     metricBadge: "Ready to Contribute & Grow",
     summary:
@@ -341,7 +341,7 @@ const projectsData: ProjectItem[] = [
     category: "Analytics Automation",
     role: "Data Analyst Intern at LUXASIA",
     period: "Jul 2026 – Present",
-    image: "/assets/images/career/luxasia-commerce-nobg.png",
+    image: "/assets/images/career/luxasia-commerce.png",
     imageLabel: "LUXASIA work setup and employee ID",
     impactMetric: "Automated Multi-Step ETL",
     summary:
@@ -361,7 +361,7 @@ const projectsData: ProjectItem[] = [
     category: "Reporting Automation",
     role: "Data Analyst Intern at Denso Ten",
     period: "Feb 2026 – Apr 2026",
-    image: "/assets/images/career/denso-analytics-nobg.png",
+    image: "/assets/images/career/denso-analytics.png",
     imageLabel: "Kevin at Denso Ten Solutions Philippines",
     impactMetric: "75–80% Less Reporting Time",
     summary:
@@ -381,7 +381,7 @@ const projectsData: ProjectItem[] = [
     category: "Data Science & IoT",
     role: "Lead AI & Data Developer",
     period: "Aug 2025 – Mar 2026",
-    image: "/assets/images/projects/fovb-aiot-nobg.png",
+    image: "/assets/images/projects/fovb-aiot.jpg",
     imageLabel: "FOVB-AIoT Dashboard & Sensor Array",
     impactMetric: "Multi-AI Model Validation",
     summary:
@@ -401,7 +401,7 @@ const projectsData: ProjectItem[] = [
     category: "Data Science & Forecasting",
     role: "Data Scientist (Phoenix Petroleum)",
     period: "Jun 2026 – Jul 2026",
-    image: "/assets/images/career/phoenix-forecasting-nobg.png",
+    image: "/assets/images/career/phoenix-forecasting.png",
     imageLabel: "Kevin at Phoenix Petroleum Philippines",
     impactMetric: "83% Time Reduction (30m → 5m)",
     summary:
@@ -421,7 +421,7 @@ const projectsData: ProjectItem[] = [
     category: "Data Engineering & IoT",
     role: "IoT Data Dashboard Developer",
     period: "Nov 2025 – Dec 2025",
-    image: "/assets/images/projects/kilo-bot-nobg.png",
+    image: "/assets/images/projects/kilo-bot.png",
     imageLabel: "Realtime Weighing & Pricing Interface",
     impactMetric: "Low-Latency Data Stream",
     summary:
@@ -441,7 +441,7 @@ const projectsData: ProjectItem[] = [
     category: "Database & Backend",
     role: "Lead Programmer",
     period: "Jan 2023 – Apr 2023",
-    image: "/assets/images/projects/curesecure-nobg.png",
+    image: "/assets/images/projects/curesecure.jpg",
     imageLabel: "Pharmacy POS and Inventory System",
     impactMetric: "Automated Stockout Alerts",
     summary:
@@ -807,7 +807,7 @@ export default function HomePage() {
       return workProjectOrder.indexOf(first.id) - workProjectOrder.indexOf(second.id);
     });
 
-  const portraitSource = "/assets/images/kevin-graduation-portrait-web-nobg.png";
+  const portraitSource = "/assets/images/kevin-graduation-portrait-web.jpg";
 
   useEffect(() => {
 
